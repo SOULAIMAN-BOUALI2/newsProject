@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Navbar = () => {
+export const Navbar = (setCategory) => {
   return (
     <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
@@ -20,18 +20,18 @@ export const Navbar = () => {
           Catégories
           </a>
           <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Politique</a></li>
-            <li><a class="dropdown-item" href="#">sport</a></li>
-            <li><a class="dropdown-item" href="#">Économie</a></li>
-            <li><a class="dropdown-item" href="#">Technologie</a></li>
-            <li><a class="dropdown-item" href="#">Science</a></li>
+            <li><a class="dropdown-item" onClick={()=>setCategory("politique")} href="#">Politique</a></li>
+            <li><a class="dropdown-item" onClick={()=>setCategory("sport")} href="#">sport</a></li>
+            <li><a class="dropdown-item" onClick={()=>setCategory("economie")} href="#">Économie</a></li>
+            <li><a class="dropdown-item" onClick={()=>setCategory("technologie")} href="#">Technologie</a></li>
+            <li><a class="dropdown-item" onClick={()=>setCategory("science")} href="#">Science</a></li>
 
             
           </ul>
         </li>
         
 
-        <a className="nav-link" href="#">Features</a>
+        <a className="nav-link" href="#" >Features</a>
       </div>
      
     </div>
